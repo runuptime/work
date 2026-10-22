@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pump.work — paper-trading memecoin launchpad</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-left">
+      <a href="/" class="logo" data-link><img src="/favicon.svg" alt="" width="28" height="28"> pump.work</a>
+      <a href="/how-it-works" data-link class="bracket">[how it works]</a>
+      <div id="ticker" class="ticker"></div>
+    </div>
+    <div class="top-right" id="account"></div>
+  </header>
+  <div class="paper-banner">play money only — no real wallets, no real SOL, nothing here has value</div>
+  <main id="app"></main>
+
+  <dialog id="auth">
+    <form method="dialog" id="auth-form">
+      <h2 id="auth-title">log in</h2>
+      <label>username <input name="username" autocomplete="username" required minlength="3" maxlength="16"></label>
+      <label>password <input name="password" type="password" autocomplete="current-password" required minlength="6"></label>
+      <p class="error" id="auth-error"></p>
+      <button class="btn green" type="submit" id="auth-submit">log in</button>
+      <p class="muted small"><a href="#" id="auth-toggle">need an account? sign up</a> · new accounts get 10 play SOL</p>
+      <button class="close" type="button" value="cancel" id="auth-close">×</button>
+    </form>
+  </dialog>
+
+  <div id="toasts"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
